@@ -10,8 +10,8 @@
 /* 		echo "<pre>",var_dump($_POST),"</pre>"; */
 
 
-//$DESTINATAIRE = "r.durin@lacentraledefinancement.fr";
-$DESTINATAIRE = "fabien.macip@gmail.com";
+//$DESTINATAIRE = "fabien.macip@gmail.com";
+$DESTINATAIRE = "robert.bouchou@orange.fr ";
 $DESTINATAIRE_BCC = "fabien.macip@gmail.com";
 
 
@@ -58,17 +58,21 @@ function cleanText($text,$br = true)
     $corp .= "MESSAGE\n\n".$message."\n";
 		
 		
+		/* 'From' => $prenom. ' '.$nom.' <'.$mail.'>', */
 		$headers  = array(
 			
 			'MIME-Version' => '1.0',
-			/* 'From' => $prenom. ' '.$nom.' <'.$mail.'>', */
-			'From' => 'mail_php@fatabien.com <\'mail_php@fatabien.com\'>',
+			'From' => 'mail_php@fatabien.com',
 			'Reply-To' => ''.$mail,
 			'Bcc' => $DESTINATAIRE_BCC.",".$mail,
 			'Content-Type' => ' text/plain; charset="utf-8"; DelSp="Yes"; format=flowed ; ',
 			'Content-Disposition' => ' inline',
 			'Content-Transfer-Encoding' => ' 7bit',
 			'X-Envelope-From' => ' <'.$mail.'>',
+			'X-Priority' => '3',
+			'X-MSMail-Priority' => 'Normal',
+			'X-Unsent' => '1',
+			'X-Originating-IP' => '[0.0.0.0]',
 			'X-Mailer' => 'PHP/'.phpversion()
 		);
 		

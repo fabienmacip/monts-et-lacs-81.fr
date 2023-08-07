@@ -151,7 +151,7 @@
 				<input type="hidden" name="contact-form-flag" id="contact-form-flag" value="flag" />
 				<button type="submit" id="btn-submit-contact" name="btn-submit-contact" 
 							 class="btn-inactive" disabled >
-					D&Eacute;POSER UNE DEMANDE
+					ENVOYER MON MESSAGE
 					<!-- onclick="validFormRdv()" -->
 				</button>
 			</div>
