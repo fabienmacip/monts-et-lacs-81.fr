@@ -39,7 +39,7 @@ function cleanText($text,$br = true)
 			$conditions = $_POST['conditions'] ?? '';
 			
 			$provenance = $provenance == '' ? 'non renseigné' : $provenance;
-			$conditions = $conditions == false ? "Pas opposé à la réutilisation des coordonnées" : "Opposé à la réutilisation des coordonnées";
+			$conditions = $conditions == false ? "Mentions Légales non acceptées" : "Mentions Légales acceptées";
 			
 			$message = "Nature : ".$nature."\n\n";
 		$message .= "Message : ".$messageFromVisitor."\n\n";
