@@ -55,7 +55,7 @@ function cleanText($text,$br = true)
     /* $adr1 = strlen(trim($adresse)) > 0 ? trim($adresse)."\n" : "";
     $adr2 = strlen(trim($adresse2)) > 0 ? trim($adresse2)."\n" : ""; */
     $corp .= "ADRESSE : ".$cp." ".$ville."\n\n";
-    $corp .= "MESSAGE\n\n".$message."\n";
+    //$corp .= "MESSAGE\n\n".$message."\n";
 		
 		
 		/* 'From' => $prenom. ' '.$nom.' <'.$mail.'>', */
