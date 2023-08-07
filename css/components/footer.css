@@ -1,0 +1,13 @@
+footer {
+  margin: 100px 10px 20px 10px;
+  text-align: center;
+  color: var(--main-color-gray-dark);
+}
+
+.footer-link {
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

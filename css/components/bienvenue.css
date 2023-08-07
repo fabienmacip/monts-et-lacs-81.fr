@@ -1,0 +1,15 @@
+.bienvenue {
+  color: var(--main-color-blue);
+  font-size: 2rem;
+}
+
+.bienvenue a {
+  color: var(--main-color-black)!important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .bienvenue {
+    font-size: 1.5rem;
+  }
+}

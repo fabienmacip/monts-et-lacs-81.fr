@@ -1,0 +1,50 @@
+.conseiller-et-horaires {
+  display: flex;
+  max-width: 800px;
+}
+
+.conseiller-et-horaires > div {
+  flex: 1;
+}
+
+.conseiller-accueil,
+.horaires {
+  display: flex;
+}
+
+.conseiller-accueil div,
+.horaires div {
+  margin: 1rem;
+}
+
+.conseiller-accueil > div:nth-child(1),
+.horaires > div:nth-child(1) {
+  border-right: 1px solid var(--main-color-light-gray);
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .conseiller-accueil-logo,
+  .horaires-logo {
+    display: none;
+  }
+
+  .horaires {
+    border-left: 1px solid var(--main-color-light-gray);
+    padding-left: 1rem;
+  }
+  
+}
+
+
+@media screen and (max-width: 576px) {
+  .conseiller-et-horaires {
+    flex-direction: column;
+  }
+
+  .horaires {
+    border-left: none;
+    border-top: 1px solid var(--main-color-light-gray);
+  }
+}

@@ -1,0 +1,45 @@
+#infos-details {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#infos-details > div {
+  width: 30%;
+  max-width: 100%;
+}
+
+.paragraphe-normal {
+  margin: 1rem auto;
+}
+
+.paragraphe-normal h2 {
+  color: var(--main-color-blue);
+  font-size: 25px;
+}
+
+.paragraphe-normal a {
+  color: var(--main-color-orange);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  #infos-details {
+    flex-direction: column;
+    width: 90vw;
+  }
+  #infos-details > div {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+

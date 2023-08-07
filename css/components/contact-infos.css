@@ -1,0 +1,32 @@
+#contact-infos {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+
+  #contact-infos {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  #contact-infos {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+}
+
+@media screen and (max-width: 340px) {
+
+  #contact-infos {
+    font-size: 0.8rem;
+  }
+  
+}

@@ -1,0 +1,31 @@
+:root {
+
+  --main-color-black: #1e3333;
+  --main-color-white: #fff;
+  --main-color-blue : #1b7888;
+  --main-color-orange : #e55d48;
+  --main-color-yellow: #fbcc4a;
+  --main-color-red: red;
+
+  --main-color-orange-dark : #d34630;
+  
+  --main-color-gray-dark: #83999a;
+  --main-color-gray: #eff6f8;
+  --main-color-light-gray: rgb(202, 202, 202);
+
+
+
+  --fond-bleu-fonce : #146c7b;
+  --fond-bleu-clair : #4b7686;
+  --fond-bleu-noir : #29444e;
+  --fond-bleu-tres-noir : #1a292e;
+  
+  --bleu-brillant : #78e8fc;
+  
+  --fond-blanc : #eff6f8;
+  --fond-noir : #1e3333;
+  --bord-noir : #333;
+  --blanc : #fff;
+  --noir : #000;
+  }
+  

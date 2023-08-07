@@ -1,0 +1,37 @@
+#toaster-contact-form {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--main-color-orange);
+  color: var(--main-color-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 95%;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#toaster-contact-form-cross {
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: 2px solid var(--main-color-white);
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #toaster-contact-form {
+    padding-top: 3.5rem;
+    font-size: 1.3rem;
+  }
+}

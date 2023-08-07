@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*, body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+.backred{
+  background-color: red;
+  color: blue;
+}
+
+
+
+  
+  #logo-lcf{
+    max-width: 300px;
+    margin: 4px 0 0 4px;
+  }
+  
+  
+  main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main>div{
+    /* background-color: #EEE; */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .button-to-take-rdv {
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: var(--main-color-orange);
+    color: var(--main-color-white);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    width: 280px;
+    letter-spacing: 1px;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  
+  button:hover {
+    background-color: var(--main-color-orange-dark);
+  }
+  
+  .orange {
+    fill: var(--main-color-orange);
+  }
+  
+  
+  .icon-mini {
+    margin-right: 5px;
+  }
+  
+  
+  #google-map {
+    display: flex;
+    justify-content: center;
+    max-width: 94vw;
+  }
+  
+  #google-map iframe {
+    width: 800px;
+    height: 400px;
+  }
+  
+  .blue-and-middle-size {
+    color: var(--main-color-blue);
+    font-size: 1.5rem;
+  }
+    
+  .doc-link {
+    text-decoration: none;
+    color: var(--main-color-orange);
+  }
+  
+.paragraphe-normal .link-to-home {
+  color: var(--main-color-gray-dark);
+}
+
+.paragraphe-normal .link-to-home:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  #logo-lcf{
+    max-width: 200px;
+  }
+}
