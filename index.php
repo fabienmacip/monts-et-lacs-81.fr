@@ -39,12 +39,12 @@ function cleanText($text,$br = true)
 			$conditions = $_POST['conditions'] ?? '';
 			
 			$provenance = $provenance == '' ? 'non renseigné' : $provenance;
-			$conditions = $conditions == false ? "Mentions Légales non acceptées" : "Mentions Légales acceptées";
+			$conditions = $conditions == false ? "non acceptées" : "acceptées";
 			
 			$message = "Nature : ".$nature."\n\n";
 		$message .= "Message : ".$messageFromVisitor."\n\n";
 		$message .= "Provenance : ".$provenance."\n\n";
-		$message .= "Conditions : ".$conditions."\n\n";
+		$message .= "Mentions légales : ".$conditions."\n\n";
     
     //ICI, AJOUTER fonction dans services/mailEngine.php pour createMail
 		
