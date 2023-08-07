@@ -13,6 +13,74 @@ $(document).ready(function(){
   //alert("ready");
 });
 
+
+function sendMail(datas) {
+  console.log(datas)
+  debugger
+  
+  
+  let datasObj = {};
+  
+  datasObj.partenaireId = partenaireId;
+  datasObj.visiteurId = visiteurId;
+
+  let data = new FormData();
+  for (const key in datasObj) {
+    data.append(key, datasObj[key])
+  }
+  var req = new XMLHttpRequest();
+  req.responseType = 'json';
+  req.open('POST', 'controleurs/sendMailVisiteurToPartenaire.php');
+  //req.open('POST', PHP_AJAX_VISITEUR);
+
+  // SPINNER
+  req.onloadstart = function() {
+    
+  }
+  
+  req.onprogress = function() {
+    
+  }
+
+  req.onload = function() {
+    
+  }
+  
+  // Requête terminée, résultat
+  req.onloadend = function () {
+    
+    let procedureOK = req.response["requeteok"]
+
+    if(procedureOK) {
+
+      partenaireNom = req.response["partenairenom"]
+
+      //setLocalLarefUser(id,nom,prenom,mail,tel,date)
+      //closeFormVisiteur()
+      //showPartenaireInUnivers(partenaireId)
+      
+      //let abc = $('#univers-enfant-div-'+partenaireId).offset().top
+      //abc -= 70
+      
+      /* window.scrollTo({
+        top: abc,
+        left: 0,
+        behavior: 'smooth'
+      }) */
+      
+      alert(`Votre mail a bien été envoyé à `+partenaireNom+``)
+    } else {
+      alert('Erreur lors de l\'envoi du mail à notre partenaire. Si cette erreur persiste, vous pouvez nous contacter directement, nous vous mettrons en relation avec le(s) partenaire(s) désiré(s).')
+    }
+
+  }
+  
+  // Envoie requête
+  req.send(data);
+
+}
+
+
 function scrollToContactForm() {
   $([document.documentElement, document.body]).animate({
     scrollTop: $("#div-form-rdv").offset().top
@@ -101,7 +169,7 @@ function validFormRdv() {
   
   let formOK = true;
 
-  console.log($('#civilite').val());
+  //console.log($('#civilite').val());
 
   if($('#civilite').val().length < 2){
     formOK = false;
@@ -149,23 +217,14 @@ function validFormRdv() {
     //renderErrorFormContact($('#fm-ville').parentNode, "Ville inconnue...");
   }
 
-  if($('#delai-projet').val().length < 2){
-    formOK = false;
-    //renderErrorFormContact($('#fm-ville').parentNode, "Ville inconnue...");
-  }
-
-  if($('#destination-projet').val().length < 2){
-    formOK = false;
-    //renderErrorFormContact($('#fm-ville').parentNode, "Ville inconnue...");
-  }
 
   if($('#objectif').val().trim().length === 0){
     formOK = false;
     //renderErrorFormContact($('#fm-message').parentNode, "Avez-vous écrit un message ?");
   }
 
-  if(!($('#conditions').checked)){
-    //formOK = false;
+  if(!($('#conditions').is(":checked"))){
+    formOK = false;
     //renderErrorFormContact($('#fm-consentement').parentNode, "Avez-vous lu et accepté les conditions générales ?");
   }
 
@@ -190,22 +249,26 @@ function validFormRdv() {
     $('#btn-submit-contact').addClass('btn-active');
     $('#btn-submit-contact').removeClass('btn-inactive');
     $('#btn-submit-contact').prop('disabled', false);
-/*     if (confirm("Confirmer l'envoi de votre message ?")) {  */
-/*       let keroxObj = {};
+    
+/*     if (confirm("Confirmer l'envoi de votre message ?")) {  
+      let objForMail = {};
       
-      keroxObj.nom = $('#fm-nom').value;
-      keroxObj.prenom = $('#fm-prenom').value;
-      keroxObj.mail = $('#fm-mail').value;
-      keroxObj.tel = $('#fm-tel').value;
-      keroxObj.ville = $('#fm-ville').value;
-      keroxObj.cp = $('#fm-cp').value;
-      keroxObj.adresse = $('#fm-adresse').value;
-      keroxObj.adresse2 = $('#fm-adresse2').value;
-      keroxObj.message = $('#fm-message').value;
- */  
+      objForMail.civilite = $('#civilite').value;
+      objForMail.nom = $('#nom').value;
+      objForMail.prenom = $('#prenom').value;
+      objForMail.mail = $('#email').value;
+      objForMail.tel = $('#telephone').value;
+      objForMail.ville = $('#ville').value;
+      objForMail.cp = $('#cp').value;
+      objForMail.projet = $('#nature-projet').value;
+      objForMail.message = $('#objectif').value;
+  
       //enableButtonLoadingState($('#btn-envoyer-mail'));
-      //sendMail(keroxObj);
-     /* }  */
+      //sendMail(objForMail)
+    }  
+ */
+
+
   } else {
     /* $("#form-rdv").submit(function(e){
       e.preventDefault();

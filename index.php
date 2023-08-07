@@ -6,75 +6,63 @@
 
 <?php
 	if(isset($_POST['contact-form-flag']) && 'flag' == $_POST['contact-form-flag']) {
-		echo '<div id="toaster-contact-form" class="paragraphe-normal box relative"><div id="toaster-contact-form-cross" class="absolute" onclick="closeContactFormToaster()">X</div>Votre message a bien &eacute;t&eacute; envoy&eacute;.<br>Nous vous recontacterons ces prochains jours.</div>';
-		
-		//$DESTINATAIRE = "r.durin@lacentraledefinancement.fr";
-		$DESTINATAIRE = "fabien.macip@gmail.com";
-		$DESTINATAIRE_BCC = "fabien.macip@gmail.com";
-		
 
-    // Cette fonction sert à nettoyer et enregistrer un texte
-    function cleanText($text,$br = true)
-    {
-        $text = htmlspecialchars(trim($text), ENT_QUOTES);
-        $text = stripslashes($text);
-        if($br){
-          $text = nl2br($text);
-        }
+/* 		echo "<pre>",var_dump($_POST),"</pre>"; */
+
+
+//$DESTINATAIRE = "r.durin@lacentraledefinancement.fr";
+$DESTINATAIRE = "fabien.macip@gmail.com";
+$DESTINATAIRE_BCC = "fabien.macip@gmail.com";
+
+
+// Cette fonction sert à nettoyer et enregistrer un texte
+function cleanText($text,$br = true)
+{
+	$text = htmlspecialchars(trim($text), ENT_QUOTES);
+	$text = stripslashes($text);
+	if($br){
+		$text = nl2br($text);
+	}
         return $text;
-    }
-
-		$civilite = $_POST['civilite'] ?? 'pas de civilite';
-    $nom = $_POST['nom'] ?? 'pas de nom';
-    $prenom = $_POST['prenom'] ?? '';
-    $mail = $_POST['email'] ?? '';
-    $tel = $_POST['telephone'] ?? '';
-    $cp = $_POST['cp'] ?? '';
-    $ville = $_POST['ville'] ?? '';
-		$delai = $_POST['delai-projet'] ?? '';
-		$destination = $_POST['destination-projet'] ?? '';
-		$nature = $_POST['nature-projet'] ?? '';
-		$objectif = $_POST['objectif'] ?? '';
-		$provenance = $_POST['provenance'] ?? '';
-		$conditions = $_POST['conditions'] ?? '';
-
-		$provenance = $provenance == '' ? 'non renseigné' : $provenance;
-		$conditions = $conditions == false ? "Pas opposé à la réutilisation des coordonnées" : "Opposé à la réutilisation des coordonnées";
-
-		$message = "Délai : ".$delai."\n\n";
-		$message .= "Destination : ".$destination."\n\n";
-		$message .= "Nature : ".$nature."\n\n";
-		$message .= "Objectif : ".$objectif."\n\n";
+			}
+			
+			$civilite = $_POST['civilite'] ?? 'pas de civilite';
+			$nom = $_POST['nom'] ?? 'pas de nom';
+			$prenom = $_POST['prenom'] ?? '';
+			$mail = $_POST['email'] ?? '';
+			$tel = $_POST['telephone'] ?? '';
+			$cp = $_POST['cp'] ?? '';
+			$ville = $_POST['ville'] ?? '';
+			$nature = $_POST['nature-projet'] ?? '';
+			$messageFromVisitor = $_POST['objectif'] ?? '';
+			$provenance = $_POST['provenance'] ?? 'non-renseigné';
+			$conditions = $_POST['conditions'] ?? '';
+			
+			$provenance = $provenance == '' ? 'non renseigné' : $provenance;
+			$conditions = $conditions == false ? "Pas opposé à la réutilisation des coordonnées" : "Opposé à la réutilisation des coordonnées";
+			
+			$message = "Nature : ".$nature."\n\n";
+		$message .= "Message : ".$messageFromVisitor."\n\n";
 		$message .= "Provenance : ".$provenance."\n\n";
 		$message .= "Conditions : ".$conditions."\n\n";
-    //$adresse = $_POST['ville'] ?? '';
-    /* $adresse2 = $_POST['adresse2'] ?? '';
-    $message = $_POST['message'] ?? ''; */
-
-/*     $nom = cleanText($nom);
-    $prenom = cleanText($prenom);
-    $ville = cleanText($ville);
-    $cp = cleanText($cp);
-    $adresse = cleanText($adresse);
-    $adresse2 = cleanText($adresse2);
-    $message = cleanText($message, false); */
     
     //ICI, AJOUTER fonction dans services/mailEngine.php pour createMail
-
+		
     $dest = $DESTINATAIRE;
-    $sujet = "Message depuis le site PCF-LCF.FR de la part de ".$prenom." ".strtoupper($nom);
-    $corp = "Message reçu depuis le site PCF-LCF.FR\n\n";
+    $sujet = "Message depuis le site MONTS-ET-LACS-81.FR de la part de ".$prenom." ".strtoupper($nom);
+    $corp = "Message reçu depuis le site MONTS-ET-LACS-81.FR\n\n";
     $corp .= "CIVILITE : ".$civilite."\nNOM : ".$nom."\nPRENOM : ".$prenom."\nMAIL : ".$mail."\nTEL : ".$tel."\n\n";
     /* $adr1 = strlen(trim($adresse)) > 0 ? trim($adresse)."\n" : "";
     $adr2 = strlen(trim($adresse2)) > 0 ? trim($adresse2)."\n" : ""; */
     $corp .= "ADRESSE : ".$cp." ".$ville."\n\n";
     $corp .= "MESSAGE\n\n".$message."\n";
-
-	
+		
+		
 		$headers  = array(
-
+			
 			'MIME-Version' => '1.0',
-			'From' => $prenom. ' '.$nom.' <'.$mail.'>',
+			/* 'From' => $prenom. ' '.$nom.' <'.$mail.'>', */
+			'From' => 'mail_php@fatabien.com <\'mail_php@fatabien.com\'>',
 			'Reply-To' => ''.$mail,
 			'Bcc' => $DESTINATAIRE_BCC.",".$mail,
 			'Content-Type' => ' text/plain; charset="utf-8"; DelSp="Yes"; format=flowed ; ',
@@ -83,16 +71,18 @@
 			'X-Envelope-From' => ' <'.$mail.'>',
 			'X-Mailer' => 'PHP/'.phpversion()
 		);
-
-
+		
+		
     if (mail($dest, $sujet, $corp, $headers)) {
-      //echo "Email envoyé avec succès à $dest ...";
+			echo "Email envoyé avec succès à $dest ...";
+			echo '<div id="toaster-contact-form" class="paragraphe-normal box relative"><div id="toaster-contact-form-cross" class="absolute" onclick="closeContactFormToaster()">X</div>Votre message a bien &eacute;t&eacute; envoy&eacute;.<br>Nous vous recontacterons ces prochains jours.</div>';
     } else {
-      //echo "Échec de l'envoi de l'email...";
+			echo "Échec de l'envoi de l'email...";
+			echo '<div id="toaster-contact-form" class="paragraphe-normal box relative"><div id="toaster-contact-form-cross" class="absolute" onclick="closeContactFormToaster()">X</div>Erreur lors de l\'envoie de votre message.</div>';
     }
 
-}
-
+	}
+	
 
 
 
@@ -160,164 +150,7 @@ Hameau de Rieuviel<br>
 	<span class="blue-and-middle-size">
 		Demande d'informations ou de r&eacute;servation
 	</span>
-	<form id="form-rdv" name="form-rdv" action="index.php" method="post"
-				onsubmit="validFormRdv()">
-		<div>
-			<div class="civilite">
-				<label for="civilite"><span class="asterisque">*</span> Civilit&eacute;</label><br/>
-				<select id="civilite" name="civilite" 
-								oninput="checkContactFormField('civilite')"
-								onblur="checkContactFormField('civilite')">
-					<option value=""></option>
-					<option value="madame">Madame</option>
-					<option value="monsieur">Monsieur</option>
-					<option value="societe">Soci&eacute;t&eacute;</option>
-					<option value="autre">Autre</option>
-				</select>
-				<div id="error-civilite" class="contact-form-error">
-					Civilit&eacute; : veuillez choisir une option
-				</div>
-			</div>
-		</div>
-		<div>
-			<div class="nom">
-				<label for="nom"><span class="asterisque">*</span> Nom <i>(ou raison sociale)</i></label><br>
-				<input type="text" name="nom" id="nom" maxlength=50 
-							 placeholder="votre nom" 
-							 oninput="checkContactFormField('nom')" 
-							 onblur="checkContactFormField('nom')"/>
-				<div id="error-nom" class="contact-form-error">Nom : minimum 2 caract&egrave;res</div>
-			</div>
-			<div class="prenom">
-				<label for="prenom"><span class="asterisque">*</span> Pr&eacute;nom <i>(ou nom du responsable si personne morale)</i></label><br>
-				<input type="text" name="prenom" id="prenom" maxlength=50 
-							 placeholder="votre prénom" 
-							 oninput="checkContactFormField('prenom')" 
-							 onblur="checkContactFormField('prenom')"/>
-				<div id="error-prenom" class="contact-form-error">Pr&eacute;nom : minimum 2 caract&egrave;res</div>
-			</div>
-		</div>
-		
-
-		<div>
-			<div class="email">
-				<label for="email"><span class="asterisque">*</span> Email</label><br>
-				<input type="email" name="email" id="email" maxlength=70 
-					     placeholder="votre email (exemple : moi@gmail.com)" 
-							 oninput="checkContactFormField('email')" 
-							 onblur="checkContactFormField('email')"/>
-				<div id="error-email" class="contact-form-error">Email invalide ou vide</div>
-			</div>
-			<div class="telephone">
-				<label for="telephone"><span class="asterisque">*</span> T&eacute;l&eacute;phone</label><br>
-				<input type="text" name="telephone" id="telephone" maxlength=10 
-							 placeholder="n° de téléphone (exemple : 0122334455)" 
-							 oninput="checkContactFormField('telephone')"
-							 onblur="checkContactFormField('telephone')"/>
-				<div id="error-telephone" class="contact-form-error">T&eacute;l&eacute;phone invalide ou vide</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="cp">
-				<label for="cp"><span class="asterisque">*</span> Code Postal</label><br>
-				<input type="text" name="cp" id="cp" maxlength=5 
-							 placeholder="votre code postal (exemple : 66200)" 
-							 oninput="checkContactFormField('cp')"
-							 onblur="checkContactFormField('cp')"/>
-				<div id="error-cp" class="contact-form-error">Code postal : 5 chiffres</div>
-			</div>
-			<div class="ville">
-				<label for="ville"><span class="asterisque">*</span> Ville</label><br>
-				<input type="text" name="ville" id="ville" maxlength=50 
-							 placeholder="votre ville" 
-							 oninput="checkContactFormField('ville')"
-							 onblur="checkContactFormField('ville')"/>
-				<div id="error-ville" class="contact-form-error">Ville : minimum 2 caract&egrave;res</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="nature-projet">
-				<label for="nature-projet"><span class="asterisque">*</span> Demande principale</label><br>
-				<select id="nature-projet" name="nature-projet" 
-								oninput="checkContactFormField('nature-projet')"
-								onblur="checkContactFormField('nature-projet')">
-					<option value=""></option>
-					<option value="location-paddle">Location paddle</option>
-					<option value="location-barque">Location barque</option>
-					<option value="location-barque-peche">Location barque pêche</option>
-					<option value="location-canoe">Location canoë</option>
-					<option value="location-canoe-peche">Location canoë pêche</option>
-					<option value="location-pedalo">Location p&eacute;dalo</option>
-					<option value="location-pedalo-enfant">Location p&eacute;dalo enfant</option>
-					<option value="gardiennage-caravane">Gardiennage caravane</option>
-					<option value="gardiennage-bateau">Gardiennage bateau</option>
-					<option value="location-gite">Location gîte</option>
-					<option value="autre">Autre...</option>
-				</select>
-				<div id="error-nature-projet" class="contact-form-error">Veuillez choisir une option</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="objectif-rdv">
-				<label for="objectif">
-				<span class="asterisque">*</span> Votre message ici</label><br>
-				<textarea name="objectif" id="objectif" maxlength=800 
-									cols="50" rows="3" 
-									oninput="checkContactFormField('objectif')"
-									onblur="checkContactFormField('objectif')"></textarea>
-				<div id="error-objectif" class="contact-form-error">Objectif : minimum 2 caract&egrave;res</div>
-			</div>
-		</div>
-
-		<div>
-			<div class="provenance">
-				<label for="provenance">Comment nous avez-vous connu ?</label><br>
-				<select id="provenance" name="provenance">
-					<option value=""></option>
-					<option value="google">Google (ou tout autre moteur de recherche)</option>
-					<option value="facebook">Facebook</option>
-					<option value="pro">Un professionnel</option>
-					<option value="particulier">Un particulier (bouche &agrave; oreille)</option>
-					<option value="pub">Une publicité</option>
-					<option value="autre">Autre</option>
-				</select>
-			</div>
-		</div>
-
-		<div>
-			<div class="conditions">
-					<span class="asterisque">*</span> Champ obligatoire<br><br>
-					<div id="div-conditions-case">
-						<input type="checkbox" name="conditions" id="conditions">
-						<div>
-							En cliquant sur « déposer une demande » vous acceptez que vos données soient utilis&eacute;es 
-							par MONTS & LACS 81 pour vous contacter par téléphone ou par e-mail à 
-							propos de votre demande. Consultez nos
-							<span class="doc-link pointer" onclick="popMentionsLegales()">
-								Mentions L&eacute;gales</span> 
-								pour en savoir plus sur l'utilisation de vos données ou pour exercer vos droits
-									et notamment votre droit d'opposition.<br><br>
-						</div>	
-					</div>
-			</div>
-		</div>
-</div>
-
-		<div>
-			<div class="tr">
-				<input type="hidden" name="contact-form-flag" id="contact-form-flag" value="flag" />
-				<button type="submit" id="btn-submit-contact" name="btn-submit-contact" 
-							 class="btn-inactive" disabled >
-					D&Eacute;POSER UNE DEMANDE
-					<!-- onclick="validFormRdv()" -->
-				</button>
-			</div>
-		</div>
-
-	</form>
+<?php require_once('./contact-form.php'); ?>
 </div>
 
 <!--  *  *  *  *  *  *  *  *  *  E N D   C O N T A C T    F O R M   *  *  *  *  *  *  *  *  * -->
