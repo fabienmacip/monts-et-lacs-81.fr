@@ -222,7 +222,42 @@ function closeContactFormToaster(){
   $('#toaster-contact-form').hide();
 }
 
-/* function modalCgu() {
-  window.scrollTo(0,0);
-  $('#cgu').show();
-} */
+
+function displayPage(page) {
+  if(page === 'mentions-legales') {
+    let main = $('main')
+    let pageToDisplay = $('#'+page)
+    let topToScroll = main.offset().top-20
+    
+    main.html('')
+    main.append(pageToDisplay)
+    pageToDisplay.show()
+    
+    window.scrollTo({
+      top: topToScroll,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+}
+
+function popMentionsLegales(){
+  let popup = document.createElement('div')
+  popup.classList.add('popup')
+  let linkToHide = document.getElementById('back-home-from-ml')
+  linkToHide.style.display = "none"
+  popup.innerHTML = $('#mentions-legales').html()
+  popup.style.visibility = "visible"
+  document.body.appendChild(popup)
+  document.body.style.overflow = "hidden"
+  popup.onclick = function() {closePopMentionsLegales(popup)}
+  popup.style.overflow = "scroll"
+}
+
+function closePopMentionsLegales(popup){
+  let linkToShow = document.getElementById('back-home-from-ml')
+  linkToShow.style.display = "inherit"
+  
+  document.body.removeChild(popup)
+  document.body.style.overflow = "scroll"
+}

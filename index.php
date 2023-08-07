@@ -99,20 +99,20 @@
 
 ?>
 
-<section id="equipe">
-	<div>
-		<img src="img/canoe.png" alt="canoe">
-	</div>
-	<div>
-		<img src="img/paddle.jpeg" alt="paddle">
-	</div>
-	<div>
-		<img src="img/barque-peche.png" alt="baque-peche">
-	</div>
-</section>
 
 <main>
-
+	
+	<section id="equipe">
+		<div>
+			<img src="img/canoe.png" alt="canoe">
+		</div>
+		<div>
+			<img src="img/paddle.jpeg" alt="paddle">
+		</div>
+		<div>
+			<img src="img/barque-peche.png" alt="baque-peche">
+		</div>
+	</section>
 
 <div id="bienvenue" class="paragraphe-normal">
 	<br>
@@ -149,69 +149,6 @@ Hameau de Rieuviel<br>
 
 </div>
 
-<!-- <div class="button-to-take-rdv">
-	<button id="to-take-rdv" href="#div-form-rdv" onclick="scrollToContactForm()">
-		PRENEZ RENDEZ-VOUS
-	</button>
-</div>
- -->
-
-<!--  <div class="conseiller-et-horaires paragraphe-normal">
-
-	<div class="conseiller-accueil">
-		<div class="conseiller-accueil-logo">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 41.8 60.5" style="enable-background:new 0 0 41.8 60.5; width: 40px; height: 57.89px;" xml:space="preserve" class="ic_character orange">
-				<g transform="translate(-982.835 -2507.346)">
-				<g transform="translate(433.531 2050.382)">
-					<path d="M561.2,486.2L561.2,486.2L561.2,486.2z"></path>
-					<path d="M579.3,486.2L579.3,486.2L579.3,486.2z"></path>
-					<g>
-						<path d="M591.1,510.2c-0.1-0.3-0.2-1.3-0.3-2.4c-0.7-7.1-1.2-11.2-2.2-12.6c-1.2-1.7-6.5-3.2-10.6-4.1     c1.9-1.3,3.4-2.7,3.8-3.3c0.1-0.2,0.4-0.6,0.6-2.4c0,0,0,0,0,0c2.2-3.6,2.7-6.2,1.7-8c-0.4-0.8-1-1.2-1.6-1.5     c1.2-2,3.7-7.4,0.6-11c0-1.5-0.5-3.5-2.1-5.1c-2.6-2.6-7-3.5-13.1-2.5c-0.4,0.1-10.9,1.8-11.7,9.6c-0.2,1-1.2,6.6,0.1,10.2     c-0.1,0.1-0.2,0.3-0.3,0.4c-0.9,1.8-0.3,4.3,2,7.5c0.2,2,0.5,2.4,0.6,2.6c0.5,0.6,2.1,2.1,4.1,3.5c-2.8,1-8.7,3.3-10.5,4.4     c-2.6,1.6-3,9.5-3,14.1c0,0.5,0.2,0.9,0.6,1.2c6.3,4.9,13.4,6.5,19.8,6.5c9.3,0,17.2-3.2,19.7-4.7     C590,512.3,591.3,511.5,591.1,510.2z M571.7,494.5c0.6-0.2,1.3-0.4,2-0.8l-2,7.4L571.7,494.5     C571.7,494.6,571.7,494.5,571.7,494.5z M559.2,467.5c0-0.1,0-0.1,0-0.2c0.5-5.6,9.1-7,9.1-7c1.6-0.2,2.9-0.3,4.1-0.3     c3.6,0,5.5,1,6.5,2c1.2,1.2,1.3,2.7,1.2,3.3c-0.1,0.5,0.1,1,0.5,1.4c1.8,1.6,0.9,4.5,0.1,6.4c-3.1-2.6-9.4-2.3-12.8-2l0.1-0.3     c0.1-0.5-0.1-1-0.4-1.4c-0.4-0.4-0.9-0.5-1.4-0.4c-2.2,0.5-5.3,3.1-7.4,5.1C558.5,471.8,559,468.8,559.2,467.5z M561.2,486.2     c-0.2-0.9-0.3-4.5-0.1-8.6c0-0.1,0.1-0.3,0.1-0.5c0-0.1,0-0.2,0-0.4c0-0.2,0-0.4,0-0.7c1.1-1.1,2.3-2.1,3.4-2.9     c0.1,0.3,0.2,0.5,0.4,0.7c0.3,0.4,0.8,0.5,1.3,0.4c3.9-0.7,12.2-1.1,13.1,2c0,0.1,0.1,0.1,0.1,0.2c0.2,4.5,0.2,8.6-0.1,9.6     c-1.1,1.2-6.4,5.3-8.7,5.5c-0.1,0-0.2,0-0.3,0s-0.2,0-0.3,0C567.6,491.4,562.2,487.4,561.2,486.2z M568.7,494.5     C568.7,494.5,568.7,494.5,568.7,494.5l0,6.6l-2-7.4C567.4,494,568.1,494.3,568.7,494.5z M552.3,509.1c0.1-5.1,0.8-10.1,1.5-10.8     c1.5-0.9,6.7-2.9,9.9-4.1l5,18.5c0.2,0.7,0.8,1.1,1.4,1.1s1.3-0.5,1.4-1.1l5.1-18.7c4.2,0.9,8.7,2.2,9.4,3     c0.7,1.2,1.5,8.7,1.7,11.2c0.1,0.8,0.1,1.5,0.2,1.9C584.9,512.2,566.2,519.3,552.3,509.1z"></path>
-						<path d="M573,488.3c0.7-0.5,0.8-1.4,0.3-2.1c-0.5-0.7-1.4-0.8-2.1-0.3c-1,0.7-2.3-0.1-2.4-0.1     c-0.7-0.4-1.6-0.2-2,0.5c-0.4,0.7-0.2,1.6,0.5,2.1c0.7,0.4,1.7,0.8,2.9,0.8C571.2,489.2,572.2,488.9,573,488.3z"></path>
-						<path d="M567.5,479.8v-2.6c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v2.6c0,0.8,0.7,1.5,1.5,1.5     S567.5,480.6,567.5,479.8z"></path>
-						<path d="M574.4,481.4c0.8,0,1.5-0.7,1.5-1.5v-2.6c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v2.6     C572.9,480.8,573.5,481.4,574.4,481.4z"></path>
-					</g>
-				</g>
-			</g>
-			</svg>
-		</div>
-		<div class="conseiller-accueil-liste">
-			<b>Votre conseiller vous accueillera pour :</b><br>
-			<svg xmlns="http://www.w3.org/2000/svg" width="9.79" height="8.448" viewBox="0 0 9.79 8.448"><defs><style>.a,.b{fill:none;stroke:#e55d48;stroke-linecap:round;stroke-width:2px;}.a{stroke-linejoin:round;}</style></defs><g transform="translate(-728.5 -432.284)"><path class="a" d="M-2136.934,9771.511l3.224,3.225-3.224,3.224" transform="translate(2871 -9338.226)"/><line class="b" x1="7" transform="translate(729.5 436.5)"/></g></svg> Assurance emprunteur<br>
-			
-			<svg xmlns="http://www.w3.org/2000/svg" width="9.79" height="8.448" viewBox="0 0 9.79 8.448"><defs><style>.a,.b{fill:none;stroke:#e55d48;stroke-linecap:round;stroke-width:2px;}.a{stroke-linejoin:round;}</style></defs><g transform="translate(-728.5 -432.284)"><path class="a" d="M-2136.934,9771.511l3.224,3.225-3.224,3.224" transform="translate(2871 -9338.226)"/><line class="b" x1="7" transform="translate(729.5 436.5)"/></g></svg> Prêt et crédit immobilier<br>
-			
-			<svg xmlns="http://www.w3.org/2000/svg" width="9.79" height="8.448" viewBox="0 0 9.79 8.448"><defs><style>.a,.b{fill:none;stroke:#e55d48;stroke-linecap:round;stroke-width:2px;}.a{stroke-linejoin:round;}</style></defs><g transform="translate(-728.5 -432.284)"><path class="a" d="M-2136.934,9771.511l3.224,3.225-3.224,3.224" transform="translate(2871 -9338.226)"/><line class="b" x1="7" transform="translate(729.5 436.5)"/></g></svg> Rachat de crédits
-		</div>
-	</div>
- -->	
-<!-- 	<div class="horaires">
-		<div class="horaires-logo">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="ic_time-left" x="0px" y="0px" viewBox="0 0 35 34.7" style="enable-background:new 0 0 35 34.7; width: 40px; height: 39.66px;" xml:space="preserve" class="ic_time_left orange">
-				<style type="text/css">
-					svg.ic_time_left .st0{fill:var(--main-color-orange);}
-				</style>
-				<g id="Layer_2_16_" transform="translate(0 0)">
-					<g id="Groupe_813">
-						<path id="Tracé_1239" class="st0" d="M21,31.7c-0.3,0.1-0.6,0.1-0.9,0.2c-0.8,0.1-1.3,0.9-1.1,1.6c0.1,0.8,0.9,1.3,1.6,1.1l0,0    c0.3-0.1,0.7-0.1,1-0.2c0.7-0.2,1.2-1,1-1.7C22.5,32,21.8,31.6,21,31.7L21,31.7z"></path>
-						<path id="Tracé_1240" class="st0" d="M31.4,12.9c0.3,0.7,1.1,1.1,1.8,0.9c0.7-0.3,1.1-1,0.9-1.7c-0.1-0.3-0.2-0.7-0.4-1    c-0.3-0.7-1.1-1.1-1.8-0.8s-1.1,1.1-0.8,1.8c0,0,0,0,0,0C31.2,12.3,31.3,12.6,31.4,12.9z"></path>
-						<path id="Tracé_1241" class="st0" d="M25.6,29.7c-0.2,0.2-0.5,0.3-0.8,0.5c-0.7,0.4-1,1.2-0.6,1.9s1.2,1,1.9,0.6    c0,0,0.1,0,0.1-0.1c0.3-0.2,0.6-0.4,0.9-0.6c0.6-0.4,0.8-1.3,0.4-2C27.1,29.5,26.2,29.3,25.6,29.7L25.6,29.7z"></path>
-						<path id="Tracé_1242" class="st0" d="M35,16.8c0-0.8-0.7-1.4-1.5-1.3c-0.8,0-1.4,0.7-1.4,1.5c0,0.3,0,0.6,0,0.9    c0,0.8,0.6,1.4,1.4,1.5c0.8,0,1.4-0.6,1.5-1.4c0,0,0,0,0,0C35,17.5,35,17.2,35,16.8z"></path>
-						<path id="Tracé_1243" class="st0" d="M31.2,26c-0.6-0.5-1.5-0.3-2,0.3c0,0,0,0,0,0c-0.2,0.2-0.4,0.5-0.6,0.7    c-0.5,0.6-0.4,1.5,0.2,2c0,0,0.1,0.1,0.1,0.1c0.6,0.4,1.4,0.3,1.9-0.2c0.2-0.3,0.5-0.6,0.7-0.8C31.9,27.4,31.8,26.5,31.2,26    L31.2,26z"></path>
-						<path id="Tracé_1244" class="st0" d="M33.3,20.9c-0.7-0.2-1.5,0.2-1.8,0.9c-0.1,0.3-0.2,0.6-0.3,0.8c-0.3,0.7,0.1,1.5,0.9,1.8    c0.7,0.2,1.5-0.1,1.8-0.8c0.1-0.3,0.2-0.7,0.3-1C34.4,22,34,21.2,33.3,20.9z"></path>
-						<path id="Tracé_1245" class="st0" d="M14.9,31.9c-1.2-0.2-2.5-0.6-3.6-1.1c0,0,0,0,0,0c-0.3-0.1-0.5-0.3-0.8-0.4l0,0    C10,30.1,9.5,29.8,9,29.5C2.4,24.8,0.8,15.7,5.5,9c1-1.4,2.2-2.6,3.6-3.6l0.1,0C14.1,2,20.6,2,25.6,5.3l-1.1,1.6    c-0.3,0.4-0.1,0.8,0.4,0.7l4.8-0.4c0.4,0,0.8-0.4,0.7-0.8c0-0.1,0-0.1,0-0.2l-1.3-4.6C29,1,28.6,0.9,28.3,1.4L27.2,3    c-3.7-2.5-8.3-3.5-12.7-2.7c-0.4,0.1-0.9,0.2-1.3,0.3h0l-0.1,0C9.3,1.5,5.9,3.8,3.5,7c0,0,0,0-0.1,0.1C3.4,7.2,3.3,7.3,3.2,7.4    C3.1,7.6,3,7.8,2.8,8c0,0,0,0,0,0.1c-2,3-2.9,6.6-2.8,10.2c0,0,0,0,0,0c0,0.4,0,0.7,0.1,1.1c0,0,0,0,0,0.1c0,0.4,0.1,0.7,0.2,1.1    c0.6,3.6,2.3,6.9,4.9,9.4l0,0l0,0c0.7,0.7,1.4,1.3,2.2,1.9c2.1,1.5,4.5,2.5,7,2.9c0.8,0.1,1.5-0.4,1.6-1.2    C16.1,32.8,15.6,32.1,14.9,31.9L14.9,31.9z"></path>
-						<path id="Tracé_1246" class="st0" d="M16.6,6.1c-0.6,0-1.1,0.5-1.1,1.1v11.3L25.8,24c0.6,0.3,1.2,0.1,1.5-0.5s0.1-1.2-0.5-1.5    l-9.1-4.7V7.3C17.8,6.6,17.2,6.1,16.6,6.1z"></path>
-					</g>
-				</g>
-				</svg>
-		</div>
-		<div class="horaires-liste">
-			<b>Horaires d'ouverture :</b><br><br>
-			Du lundi au vendredi de 09h00 à 13h00, puis de 14h00 à 18h00.
-		</div>
-	</div>
-</div>
- -->
 <div id="google-map" class="google-map">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1441.7984000845497!2d2.75733188399143!3d43.71892761891885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1f4dffd1ccd0b%3A0x2606f69d2df637d1!2sRieuviel%2C%2081320%20Moulin-Mage!5e0!3m2!1sfr!2sfr!4v1691427355340!5m2!1sfr!2sfr" 
 	style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -321,37 +258,8 @@ Hameau de Rieuviel<br>
 				</select>
 				<div id="error-nature-projet" class="contact-form-error">Veuillez choisir une option</div>
 			</div>
-			<!-- <div class="delai-projet">
-				<label for="delai-projet"><span class="asterisque">*</span> D&eacute;lais</label><br>
-				<select id="delai-projet" name="delai-projet" 
-								oninput="checkContactFormField('delai-projet')"
-								onblur="checkContactFormField('delai-projet')">
-					<option value=""></option>
-					<option value="immediat">Imm&eacute;diat</option>
-					<option value="6mois">Moins de 6 mois</option>
-					<option value="12mois">Moins de 12 mois</option>
-					<option value="renseignements">Simple demande de renseignements</option>
-				</select>
-				<div id="error-delai-projet" class="contact-form-error">Veuillez choisir une option</div>
-			</div> -->
 		</div>
 
-<!-- 		<div>
-			<div class="destination-projet">
-				<label for="destination-projet"><span class="asterisque">*</span> Destination du projet</label><br>
-				<select id="destination-projet" name="destination-projet" 
-								oninput="checkContactFormField('destination-projet')"
-								onblur="checkContactFormField('destination-projet')">
-					<option value=""></option>
-					<option value="rp">R&eacute;sidence principale</option>
-					<option value="secondaire">R&eacute;sidence secondaire</option>
-					<option value="locatif">R&eacute;sidence locative</option>
-					<option value="autre">Autre</option>
-				</select>
-				<div id="error-destination-projet" class="contact-form-error">Veuillez choisir une option</div>
-			</div>
-		</div>
- -->
 		<div>
 			<div class="objectif-rdv">
 				<label for="objectif">
@@ -388,8 +296,8 @@ Hameau de Rieuviel<br>
 							En cliquant sur « déposer une demande » vous acceptez que vos données soient utilis&eacute;es 
 							par MONTS & LACS 81 pour vous contacter par téléphone ou par e-mail à 
 							propos de votre demande. Consultez nos
-							<a class="doc-link" href="mentions-legales.php">
-								Mentions L&eacute;gales</a> 
+							<span class="doc-link pointer" onclick="popMentionsLegales()">
+								Mentions L&eacute;gales</span> 
 								pour en savoir plus sur l'utilisation de vos données ou pour exercer vos droits
 									et notamment votre droit d'opposition.<br><br>
 						</div>	
@@ -452,4 +360,5 @@ Hameau de Rieuviel<br>
 
 <?php
 	require_once('./footer.php');
+	require_once('./mentions-legales.php');
 ?>

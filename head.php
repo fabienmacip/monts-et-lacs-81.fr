@@ -22,7 +22,7 @@
 
 
 <meta charset="utf-8" />
-<meta name="description" content="Agence de courtage en crédits et assurances, affiliée à La Centrale de Financement."/>
+<meta name="description" content="Location de petites embarcations sans permis + Gardiennage caravane et bateaux + Gîtes. A Murat-sur-Vèbre, Moulin-Mage et lac du Laouzas, dans le Tarn."/>
 
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
@@ -32,7 +32,7 @@
 
 <body>
 <div id="logo-lcf" class="box">
-  <a href="index.php">
+  <a href="index.php" rel="accueil">
     <img src="img/logo-monts-et-lacs-81.jpg" alt="logo-monts-et-lacs-81">
   </a>
 </div>

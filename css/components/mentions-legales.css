@@ -1,0 +1,49 @@
+#cgu {
+  /* display: none;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240,240,240,0.95);
+  z-index: 100; */
+}
+
+#mentions-legales {
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 1rem 5px;
+  text-align: left;
+}
+
+#mentions-legales > div {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#mentions-legales li {
+  list-style: disc;
+  
+}
+
+.popup {
+  visibility: hidden;
+  /* visibility: visible; */
+  /* overflow: scroll; */
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(40,40,40,0.95);
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+}
+
+.popup > div {
+  padding: 2rem 1rem 4rem 1rem;
+}

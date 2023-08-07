@@ -88,11 +88,11 @@ h1, h3 {
     font-size: 1.5rem;
   }
     
-  .doc-link {
+  .doc-link, .link {
     text-decoration: none;
     color: var(--main-color-orange);
   }
-  
+
 .paragraphe-normal .link-to-home {
   color: var(--main-color-gray-dark);
 }
