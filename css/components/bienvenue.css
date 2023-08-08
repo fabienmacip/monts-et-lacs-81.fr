@@ -1,15 +1,29 @@
 .bienvenue {
   color: var(--main-color-blue);
   font-size: 2rem;
+  text-align: center;
 }
 
 .bienvenue a {
   color: var(--main-color-black)!important;
 }
 
+.span-br {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .bienvenue {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bienvenue {
+    font-size: 1.2rem;
+  }
+
+  .span-br{
+    display: inline;
   }
 }

@@ -31,10 +31,24 @@
 </head>
 
 <body>
-<div id="logo-lcf" class="box">
-  <a href="index.php" rel="accueil">
-    <img src="img/logo-monts-et-lacs-81.jpg" alt="logo-monts-et-lacs-81">
-  </a>
+<div id="logos-banner">
+  <div id="logo-lcf" class="box">
+    <a href="index.php" rel="accueil">
+      <img src="img/logo-monts-et-lacs-81.jpg" alt="logo-monts-et-lacs-81">
+    </a>
+  </div>
+  <div id="logos-liens-externes">
+    <div>
+      <a href="https://www.facebook.com/montsetlacs81" rel="facebook.com/montsetlacs81" target="_blank">
+        <img src="img/logo-facebook-monts-et-lacs-81.png" alt="logo-facebook">
+      </a>
+    </div>  
+    <div>
+      <a href="https://www.tourisme-montsetlacsenhautlanguedoc.com/" rel="Office de tourisme" target="_blank">
+        <img src="img/logo-ot.png" alt="logo-ot">
+      </a>
+    </div>
+  </div>
 </div>
 
 

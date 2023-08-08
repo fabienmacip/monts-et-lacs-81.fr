@@ -104,14 +104,17 @@ function cleanText($text,$br = true)
 			<img src="img/paddle.jpeg" alt="paddle">
 		</div>
 		<div>
-			<img src="img/barque-peche.png" alt="baque-peche">
+			<img src="img/barque-peche.png" alt="barque-peche">
+		</div>
+		<div>
+			<img src="img/pedalo-enfant.jpeg" alt="pedalo-enfant">
 		</div>
 	</section>
 
 <div id="bienvenue" class="paragraphe-normal">
 	<br>
 	<div class="bienvenue">
-		Bienvenue chez <b>MONTS & LACS 81</b> !<br/><br/>
+		Bienvenue chez <span class="span-br"><br></span><b>MONTS & LACS 81</b> !<br/><br/>
 	</div>
 
 	N'hésitez pas à nous contacter pour vos demandes d'informations ou de devis...<br><br>
@@ -164,7 +167,7 @@ Hameau de Rieuviel<br>
 				Location matériel nagivable
 			</h2>
 			<p>
-				Vous pouvez louer &grave; l'heure, &agrave; la demi-journ&eacute;e, &grave; la journ&eacute;e...<br>
+				Vous pouvez louer &agrave; l'heure, &agrave; la demi-journ&eacute;e, &agrave; la journ&eacute;e...<br>
 				La livraison est gratuite sur le lac du Laouzas.<br>
 				Voir notre grille tarifaire ci-dessous.
 			</p>

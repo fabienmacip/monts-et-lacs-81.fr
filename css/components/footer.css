@@ -11,3 +11,19 @@ footer {
 .footer-link:hover {
   text-decoration: underline;
 }
+
+#separator-footer-little-screen{
+  display: none;   
+}
+
+@media screen and (max-width: 480px) {
+footer {
+  margin-bottom: 3rem;
+}
+  #separator-footer-big-screen{
+      display: none;
+  }
+  #separator-footer-little-screen{
+      display: inherit;   
+  }
+}
